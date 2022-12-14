@@ -1,0 +1,88 @@
+{
+    "obj": {
+        "m.AlphaToCoverageEnable": 1,
+        "m.IndependentBlendEnable": 0,
+        "m.RenderTarget": {
+            "value0": {
+                "m.BlendEnable": 1,
+                "m.BlendOp": 2,
+                "m.BlendOpAlpha": 1,
+                "m.DestBlend": 4,
+                "m.DestBlendAlpha": 1,
+                "m.RenderTargetWriteMask": 15,
+                "m.SrcBlend": 4,
+                "m.SrcBlendAlpha": 7
+            },
+            "value1": {
+                "m.BlendEnable": 0,
+                "m.BlendOp": 1,
+                "m.BlendOpAlpha": 1,
+                "m.DestBlend": 1,
+                "m.DestBlendAlpha": 1,
+                "m.RenderTargetWriteMask": 15,
+                "m.SrcBlend": 2,
+                "m.SrcBlendAlpha": 2
+            },
+            "value2": {
+                "m.BlendEnable": 0,
+                "m.BlendOp": 1,
+                "m.BlendOpAlpha": 1,
+                "m.DestBlend": 1,
+                "m.DestBlendAlpha": 1,
+                "m.RenderTargetWriteMask": 15,
+                "m.SrcBlend": 2,
+                "m.SrcBlendAlpha": 2
+            },
+            "value3": {
+                "m.BlendEnable": 0,
+                "m.BlendOp": 1,
+                "m.BlendOpAlpha": 1,
+                "m.DestBlend": 1,
+                "m.DestBlendAlpha": 1,
+                "m.RenderTargetWriteMask": 15,
+                "m.SrcBlend": 2,
+                "m.SrcBlendAlpha": 2
+            },
+            "value4": {
+                "m.BlendEnable": 0,
+                "m.BlendOp": 1,
+                "m.BlendOpAlpha": 1,
+                "m.DestBlend": 1,
+                "m.DestBlendAlpha": 1,
+                "m.RenderTargetWriteMask": 15,
+                "m.SrcBlend": 2,
+                "m.SrcBlendAlpha": 2
+            },
+            "value5": {
+                "m.BlendEnable": 0,
+                "m.BlendOp": 1,
+                "m.BlendOpAlpha": 1,
+                "m.DestBlend": 1,
+                "m.DestBlendAlpha": 1,
+                "m.RenderTargetWriteMask": 15,
+                "m.SrcBlend": 2,
+                "m.SrcBlendAlpha": 2
+            },
+            "value6": {
+                "m.BlendEnable": 0,
+                "m.BlendOp": 1,
+                "m.BlendOpAlpha": 1,
+                "m.DestBlend": 1,
+                "m.DestBlendAlpha": 1,
+                "m.RenderTargetWriteMask": 15,
+                "m.SrcBlend": 2,
+                "m.SrcBlendAlpha": 2
+            },
+            "value7": {
+                "m.BlendEnable": 0,
+                "m.BlendOp": 1,
+                "m.BlendOpAlpha": 1,
+                "m.DestBlend": 1,
+                "m.DestBlendAlpha": 1,
+                "m.RenderTargetWriteMask": 15,
+                "m.SrcBlend": 2,
+                "m.SrcBlendAlpha": 2
+            }
+        }
+    }
+}
