@@ -6,14 +6,13 @@
 #define IMGUIPRACTICE_BLEND_DESC_STRUCT_H
 #include <imgui.h>
 #include <d3d11.h>
-#include "../render.h"
 #include "../utils/OpenJSONFile.h"
 #include "../components/ComponentUtils.h"
 #include "../components/RenderTargetGroup.h"
 #include "../utils/JSONSerializer.h"
 #include <vector>
 #include <memory>
-class BLEND_DESC_Struct: public Renderable{
+class BLEND_DESC_Struct{
 private:
     OpenJSONFile openJsonFile;
     JSONSerializer<D3D11_BLEND_DESC> jsonSerializer;
@@ -25,7 +24,7 @@ public:
     BLEND_DESC_Struct();
     bool isDisplay();
     void startDisplay();
-    void render() override;
+    void render();
     void update();
     void structureInit();
     ~BLEND_DESC_Struct();

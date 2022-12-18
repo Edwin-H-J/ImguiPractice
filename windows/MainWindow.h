@@ -6,14 +6,13 @@
 #define IMGUIPRACTICE_MAINWINDOW_H
 #include <imgui.h>
 #include "../components/ButtonGroup.h"
-#include "../render.h"
 
-class MainWindow : public Renderable{
+class MainWindow{
 private:
     ButtonGroup buttonGroup;
 public:
-    void render() override;
-    ~MainWindow() override = default;
+    void render() ;
+    ~MainWindow()  = default;
 };
 
 

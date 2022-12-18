@@ -5,13 +5,12 @@
 #ifndef IMGUIPRACTICE_RENDERTARGETGROUP_H
 #define IMGUIPRACTICE_RENDERTARGETGROUP_H
 
-#include "../render.h"
 #include <imgui.h>
 #include <d3d11.h>
 #include "D3D11_BLEND_COMBO.h"
 #include "D3D11_BLEND_OP_COMBO.h"
 
-class RenderTargetGroup : public Renderable {
+class RenderTargetGroup {
 private:
     D3D11_RENDER_TARGET_BLEND_DESC &d3D11RenderTargetBlendDesc;
     D3D11_BLEND_COMBO SrcBlend;
@@ -23,7 +22,7 @@ private:
 public:
     explicit RenderTargetGroup(D3D11_RENDER_TARGET_BLEND_DESC &src);
 
-    void render() override;
+    void render();
 
     void update();
 

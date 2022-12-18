@@ -5,13 +5,12 @@
 #ifndef IMGUIPRACTICE_D3D11_BLEND_OP_COMBO_H
 #define IMGUIPRACTICE_D3D11_BLEND_OP_COMBO_H
 
-#include "../render.h"
 #include <d3d11.h>
 #include <imgui.h>
 
 
 
-class D3D11_BLEND_OP_COMBO : public Renderable {
+class D3D11_BLEND_OP_COMBO {
 private:
     const char *ComboName;
     D3D11_BLEND_OP &src;
@@ -19,7 +18,7 @@ private:
 public:
     D3D11_BLEND_OP_COMBO(D3D11_BLEND_OP &proxy, const char *name);
 
-    void render() override;
+    void render();
 
     void update();
 
