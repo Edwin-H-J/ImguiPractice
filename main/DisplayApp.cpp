@@ -22,6 +22,13 @@ void DisplayApp::DrawScene() {
     m_pd3dImmediateContext->ClearDepthStencilView(m_pDepthStencilView, D3D11_CLEAR_DEPTH | D3D11_CLEAR_STENCIL, 1.0f, 0);
     triangle.draw();
 
+    ImGui_ImplDX11_NewFrame();
+    ImGui_ImplWin32_NewFrame();
+    ImGui::NewFrame();
+    mainWindow.render();
+    ImGui::Render();
+
+    ImGui_ImplDX11_RenderDrawData(ImGui::GetDrawData());
     m_pSwapChain->Present(0, 0);
 }
 

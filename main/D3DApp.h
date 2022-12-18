@@ -4,7 +4,9 @@
 #include <Windows.h>
 #include <d3d11.h>
 #include <cassert>
-
+#include <imgui.h>
+#include <backend/imgui_impl_win32.h>
+#include <backend/imgui_impl_dx11.h>
 class D3DApp {
 public:
     D3DApp(const std::wstring& windowName, int initWidth, int initHeight);
@@ -19,6 +21,7 @@ protected:
     bool InitMainWindow();
     bool InitDirect3D();
     void cleanPtr();
+    bool InitImGui();
 
 
     HINSTANCE hinstance;

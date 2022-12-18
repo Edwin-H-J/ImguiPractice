@@ -6,11 +6,13 @@
 #define IMGUIPRACTICE_DISPLAYAPP_H
 #include "D3DApp.h"
 #include "../triangle/Triangle.h"
+#include "../windows/MainWindow.h"
 
 class DisplayApp: public D3DApp{
 public:
     DisplayApp(const std::wstring& windowName, int initWidth, int initHeight);
     Triangle triangle;
+    MainWindow mainWindow;
     bool Init();
     void DrawScene();
 };

@@ -1,5 +1,5 @@
 #include "D3DApp.h"
-extern LRESULT WINAPI ImGui_ImplWin32_WndProcHandler(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
+extern IMGUI_IMPL_API LRESULT ImGui_ImplWin32_WndProcHandler(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
 D3DApp* g_pd3dApp = nullptr;
 LRESULT CALLBACK
 MainWndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam)
@@ -12,6 +12,9 @@ bool D3DApp::Init() {
 
     if (!InitDirect3D())
         return false;
+    if(!InitImGui()) {
+        return false;
+    }
     return true;
 }
 
@@ -205,7 +208,10 @@ void D3DApp::cleanPtr() {
 
 }
 
-LRESULT D3DApp::MsgProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam) {
+LRESULT D3DApp::MsgProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam) {\
+    if(ImGui_ImplWin32_WndProcHandler(hwnd, msg, wParam, lParam)) {
+        return true;
+    }
     switch (msg)
     {
         case WM_ACTIVATE:
@@ -291,7 +297,7 @@ LRESULT D3DApp::MsgProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam) {
         case WM_MOUSEMOVE:
             return 0;
     }
-    
+
     return DefWindowProc(hwnd, msg, wParam, lParam);
 }
 
@@ -368,4 +374,13 @@ void D3DApp::OnResize() {
     m_ScreenViewport.MaxDepth = 1.0f;
 
     m_pd3dImmediateContext->RSSetViewports(1, &m_ScreenViewport);
+}
+
+bool D3DApp::InitImGui() {
+    IMGUI_CHECKVERSION();
+    ImGui::CreateContext();
+    ImGuiIO& io = ImGui::GetIO(); (void)io;
+    ImGui_ImplWin32_Init(HWND(m_hMainWnd));
+    ImGui_ImplDX11_Init(m_pd3dDevice, m_pd3dImmediateContext);
+    return true;
 }
